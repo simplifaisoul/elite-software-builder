@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  elite-builder:
+    build: .
+    container_name: elite-software-builder
+    volumes:
+      - ./projects:/app/projects
+      - ./config.json:/app/config.json
+      - ./elite_builder:/app/elite_builder
+    environment:
+      - DATABASE_URL=${DATABASE_URL:-}
+      - DATABASE_TYPE=${DATABASE_TYPE:-}
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - STRIPE_API_KEY=${STRIPE_API_KEY:-}
+      - GITHUB_TOKEN=${GITHUB_TOKEN:-}
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    command: ["mcp"]
