@@ -1,0 +1,12 @@
+# Elite Software Builder Requirements
+
+# GitHub API - for GitHub integration
+PyGithub>=2.1.0
+
+# Additional utilities
+python-dotenv>=1.0.0
+
+# Note: MCP server uses stdio-based JSON-RPC, no external MCP library required
+
+# Workflow Engine Requirements
+aiohttp>=3.9.0
