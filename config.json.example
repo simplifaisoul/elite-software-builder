@@ -1,0 +1,12 @@
+{
+  "project_name": "elite-built-app",
+  "database_type": null,
+  "database_url": null,
+  "database_ssl": false,
+  "api_keys": {
+    "openai": null,
+    "stripe": null,
+    "github": null
+  },
+  "services": {}
+}
